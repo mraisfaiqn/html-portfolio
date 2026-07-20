@@ -68,14 +68,19 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  border: 5px solid grey;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .profile-img {
-  height: 200px;
-  width: 200px;
-  border: 5px solid grey;
-  border-radius: 50%;
-  
+  height: 115%;
+  width: 115%;
+  object-fit: cover;
+  transform: translate(5%, 5%);
 }
 
 .about-me {
@@ -91,6 +96,63 @@ body {
   font-style: normal;
 }
 
+.skills-columns {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.skills-column {
+  flex: 1 1 300px;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.skills-column h2 {
+  text-align: left;
+}
+
+@media (min-width: 700px) {
+  .skills-column + .skills-column {
+    border-left: 1px solid #d9d9d9;
+    padding-left: 40px;
+  }
+}
+
+.skills-column ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex: 1;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.soft-skills-chart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.soft-skills-chart svg {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+}
+
+.chart-label {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  fill: #333333;
+}
+
 .professional-exp {
   font-family: "Ubuntu", sans-serif;
   font-weight: 300;
@@ -99,7 +161,7 @@ body {
 
 .education {
   font-family: "Ubuntu", sans-serif;
-  font-weight: 600;
+  font-weight: 300;
   font-style: normal;
 }
 
